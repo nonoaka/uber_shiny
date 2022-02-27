@@ -57,8 +57,8 @@
                 
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll"  href="#about" title="about">Introduction</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Trip Maps</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="Evolution par année">Introduction</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Formations</a></li>
                 </ul>
 
     
@@ -97,19 +97,19 @@
 
             <div class="row home-content__main">
 
-                <h3>Explore my Uber Data</h3>
+                <h3>Notre objectif</h3>
 
                 <h1>
-                    This shiny app<br>
-                    demonstrates how one can build a beautiful UI<br>
-                    and incorporate R Shiny server logic <br>
+                    Cette application Shiny<br>
+                    permet de visualiser les caractéristiques des étudiants à l'Université de Pau de 2014 à 2020<br>
+                    et de prédire le nombre d'inscrits pour les années futures  <br>
                     whilst exploring my Uber data
                 </h1>
                 
 
                 <div class="home-content__buttons">
                     <a href="#about" class="smoothscroll btn btn--stroke">
-                        View the app
+                        C'est parti !
                     </a>
                 </div>
 
@@ -137,7 +137,7 @@
             <div class="col-full">
                 <h3 class="subhead subhead--dark">Hello There</h3>
                 <h1 class="display-1 display-1--light">
-                  Check out my data from {{number_of_trips}} uber trips
+                  Evolution dans le temps du nombre d'étudiants 
                   </h1>
             </div>
         </div> <!-- end section-header -->
@@ -149,24 +149,24 @@
                 
             <div class="col-block stats__col">
                 <div class="stats__count">
-                  {{num_hours_text}}
+                 a
                 </div>
-                <h5>Hours Travelled</h5>
-                <h6>Longest trip (time) {{longest_trip_time}} minutes</h6>
+                <h5>Evolution globale </h5>
+                <h6>Le pic de ... est atteint en   </h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">
-                  {{num_distance_text}}
+                  b
                 </div>
-                <h5>Kilometres Travelled</h5>
-                <h6>Longest trip (distance) {{longest_trip_distance}} kms</h6>
+                <h5>Evoution du nombre d'hommes</h5>
+                <h6>Le pic de ... est atteint en  </h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">
                   <pre id="num_dollars_spent" class="shiny-text-output"></pre>
                 </div>
-                <h5>US Dollars Spent</h5> 
-                <h6>Most expensive trip $ {{expensive_trip}} </h6>
+                <h5>Evolution du nombre de femmes</h5> 
+                <h6>Le pic de ... est atteint en  </h6>
             </div> 
 
         </div> 
@@ -184,23 +184,12 @@
       
         <div class="row section-header has-bottom-sep aos-init aos-animate" data-aos="fade-up">
             <div class="col-full">
-                <h2 class="subhead">Let's map some of my Uber Trips</h2>
+                <h2 class="subhead">Les formations</h2>
 
             </div>
         </div>
 
-      <div class="intro-wrap"> 
-      {{ leaflet_map }}
-      </div>
-      
-      <div class="row services-list block-1-2 block-tab-full">
-        <div class="col-block service-item aos-init aos-animate" data-aos="fade-up">
-            {{ city_selector }}
-        </div>
-        <div class="col-block service-item aos-init aos-animate" data-aos="fade-up">
-            {{ time_selector }}
-        </div>
-      </div>
+     
 
     </section> 
     <!-- end s-map -->

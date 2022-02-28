@@ -117,7 +117,7 @@
 
             <div class="home-content__scroll">
                 <a href="#about" class="scroll-link smoothscroll">
-                    <span>Scroll Down</span>
+                    <span>Page suivante</span>
                 </a>
             </div>
 
@@ -135,9 +135,9 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h3 class="subhead subhead--dark">2014-2020</h3>
                 <h1 class="display-1 display-1--light">
-                  Evolution dans le temps du nombre d'étudiants 
+                  Jettez un coup oeil à l'évolution du nombre d'étudiants
                   </h1>
             </div>
         </div> <!-- end section-header -->
@@ -149,24 +149,24 @@
                 
             <div class="col-block stats__col">
                 <div class="stats__count">
-                 a
+                  {{evolution_globale}}
                 </div>
-                <h5>Evolution globale </h5>
-                <h6>Le pic de ... est atteint en   </h6>
+                <h5>Evolution globale de 2015 à 2021</h5>
+                <h6>Pic atteint en 2015</h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">
-                  b
+                  {{evolution_sex_effectif}}
                 </div>
-                <h5>Evoution du nombre d'hommes</h5>
-                <h6>Le pic de ... est atteint en  </h6>
+                <h5>Evolution en fonction du genre de 2015 à 2021</h5>
+                <h6>A partir de 2017, il y'a plus de femmes que d'hommes inscrits</h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">
-                  <pre id="num_dollars_spent" class="shiny-text-output"></pre>
+                  <pre id="num_dollars_spent" class="shiny-text-output"> {{nombre_etudiants}} </pre>
                 </div>
-                <h5>Evolution du nombre de femmes</h5> 
-                <h6>Le pic de ... est atteint en  </h6>
+                <h5>Nombre d'étudiants total</h5> 
+                <h6>Dont {{effectif_f}} femmes et {{effectif_m}} hommes </h6>
             </div> 
 
         </div> 
@@ -177,6 +177,7 @@
 
     </section> 
     <!-- end s-about -->
+
 
 
     <!-- map ================================================== -->

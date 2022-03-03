@@ -100,9 +100,8 @@
                 <h3>Notre objectif</h3>
 
                 <h1>
-                    Cette application Shiny<br>
-                    permet de visualiser les caractéristiques des étudiants à l'Université de Pau de 2014 à 2020<br>
-                    et de prédire le nombre d'inscrits pour les années futures  <br>
+                    Visualisez les statisques<br>
+                    des étudiants à l'Université de Pau de 2014 à 2020<br>
                     
                 </h1>
                 
@@ -135,10 +134,10 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead subhead--dark">2014-2020</h3>
-                <h1 class="display-1 display-1--light">
-                  Jettez un coup oeil à l'évolution du nombre d'étudiants
-                  </h1>
+                <h3 class="subhead subhead--dark">Evolution générale</h3>
+                <h4 class="display-1 display-1--light">
+                  Jettez un coup oeil à l'évolution du nombre d'étudiants entre 2014 et 2020
+                 </h4>
             </div>
         </div> <!-- end section-header -->
 
@@ -146,6 +145,14 @@
 
         <!--- NUMBERS BY INTEGRATING SHINY OUTPUT -->
         <div class="row about-stats stats block-1-3 block-m-1-2 block-mob-full" data-aos="fade-up">
+            
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                   {{nombre_etudiants}} 
+                </div>
+                <h5>Nombre d'étudiants total</h5> 
+                <h6>Dont {{effectif_f}} femmes et {{effectif_m}} hommes </h6>
+            </div> 
                 
             <div class="col-block stats__col">
                 
@@ -159,15 +166,9 @@
                   {{evolution_sex_effectif}}
                 
                 <h5>Evolution en fonction du genre de 2015 à 2021</h5>
-                <h6>A partir de 2017, il y'a plus de femmes que d'hommes inscrits</h6>
+                <h6>A partir de 2017, <br> il y'a plus de femmes que d'hommes inscrits</h6>
             </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">
-                   {{nombre_etudiants}} 
-                </div>
-                <h5>Nombre d'étudiants total</h5> 
-                <h6>Dont {{effectif_f}} femmes et {{effectif_m}} hommes </h6>
-            </div> 
+            
 
         </div> 
          <!--- END NUMBERS BY INTEGRATING SHINY OUTPUT -->
@@ -186,14 +187,25 @@
         <div class="row section-header has-bottom-sep aos-init aos-animate" data-aos="fade-up">
             <div class="col-full">
                 <h2 class="subhead">Les formations</h2>
-  
-                {{selecteur_disciplines}}
-                {{evolution_disc_sex}}
-                {{selecteur_disciplines}}
-                {{evolution_disc_form}}
-                
-
             </div>
+            {{evolution_eff_form}}
+        </div>
+         <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            {{selecteur_disciplines}}
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            {{evolution_disc_form}}
+             
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            {{evolution_disc_sex}}
+          </div>
+
+
         </div>
 
      
@@ -204,9 +216,8 @@
     <section id="vivek" class="s-services">
       <div class="row section-header aos-init aos-animate" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead">Our Clients</h3>
-                <h1 class="display-2">Glint has been honored to
-                partner up with these clients</h1>
+                <h3 class="subhead">Prédictions</h3>
+                
             </div>
         </div>
     </section>
